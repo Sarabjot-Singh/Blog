@@ -1,0 +1,42 @@
+1)  Django provide ---O.R.M--- (Object Relational Mapper) functionalities This allows
+    one to work with different databases in object oriented way thus providing a pre
+    given syntax to perform actions also we need not to learn sql codes everytime
+
+
+2)  Migrations are useful inorder to alter the database table after its creation
+
+3)  Since we are not makng registration form instead we r using an object
+    of it provided by django.contrib.forms thus we need to add extra fields to
+    form by ourselves by creating new form inherting usercreationform
+    and add required fields on that
+
+
+4)  Django provides us with class based views which are in
+    django.contrib.auth.views
+    some are LoginView, LogoutView etc.
+    as_view() method for this views tells us for path for our form
+    This type of form take care for our logic but not the template.
+
+5)  IN settings.py at bottom
+    a) LOGIN_REDIRECT_URL this setting change the default page which will open when we logsin
+    b) LOGIN_URL this setting will tell which url must be open if a view is caalled which
+       is decorated with login_required
+
+6)  In Django User table is created by its own once we create an admin
+
+7)  CRISPY_TEMPLATE_PACK = 'bootstrap4' This setting in settings.py tells us that which
+    template structure will be followed by the crispy_forms
+
+8)  In order to use crispy forms in django we use ----{% load crispy_forms_tags %}----
+    at top of template and just filter our form with crispy_form
+    as-:
+
+    {% form_name|crispy %}
+
+9)  MEDIA_ROOT this is directory where in all the media files are stored
+
+10) MEDIA_URL this is a url pointing to media base dir which can be used by django to
+    know the url for a media
+
+11) Django-Signals -> a django signal is python script that automatically fires after a
+    expected task is performed(User cration in our case)
